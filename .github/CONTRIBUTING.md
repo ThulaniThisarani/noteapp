@@ -20,3 +20,24 @@ Thanks for considering contributing!
 
 - Every PR must be reviewed by at least one team member
 - Lint before pushing: `npm run lint`
+# 🤝 Team Collaboration Guidelines
+
+## 👥 Communication
+- Use GitHub Issues for task tracking
+- Mention teammates using `@username` in PRs
+
+## 🧪 Branching Strategy
+- `main`: production-ready code
+- `feature/*`: new features
+- `bugfix/*`: bug fixes
+- `chore/*`: maintenance
+
+## ✅ Pull Request Rules
+- All changes go through PRs
+- Minimum 1 approval is required
+- PR must reference the issue number (e.g., `Fixes #12`)
+
+## 🧹 Code Quality
+- Use ESLint and Prettier
+- Commit using Conventional Commits
+- Write descriptive PR titles
