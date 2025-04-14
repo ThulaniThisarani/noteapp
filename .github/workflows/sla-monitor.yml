@@ -1,0 +1,33 @@
+name: SLA Reminder
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # every day at 9 AM UTC
+
+jobs:
+  sla-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'bug'
+            });
+
+            for (const issue of issues.data) {
+              const createdAt = new Date(issue.created_at);
+              const now = new Date();
+              const daysOpen = (now - createdAt) / (1000 * 60 * 60 * 24);
+
+              if (daysOpen > 3) {
+                await github.rest.issues.createComment({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  body: `⏱️ SLA reminder: This issue has been open for over 3 days. Please take action!`
+                });
+              }
+            }
