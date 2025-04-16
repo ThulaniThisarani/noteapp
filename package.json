@@ -161,7 +161,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "standard-version",
     "test:unit": "jest"
-    
   },
   "jest": {
     "testEnvironment": "jsdom"
