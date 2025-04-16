@@ -17,7 +17,7 @@ function displayNotes() {
   });
 }
 
-function addNote() {
+function addNote() { bb
   const noteText = noteInput.value.trim();
   console.log("Note added ", noteText)
   if (noteText !== '') {
