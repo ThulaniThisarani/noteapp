@@ -151,11 +151,18 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "standard-version": "^9.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "standard-version"
+    "release": "standard-version",
+    "test:unit": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "repository": {
     "type": "git",

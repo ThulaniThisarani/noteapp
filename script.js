@@ -34,6 +34,8 @@ function deleteNote(index) {
 }
 
 addNoteBtn.addEventListener('click', addNote);
-
-// Show notes on load
 displayNotes();
+
+// Expose globally for testing
+window.deleteNote = deleteNote;
+window.addNote = addNote;
