@@ -73,7 +73,7 @@
     "is-fullwidth-code-point": "^3.0.0",
     "is-obj": "^2.0.0",
     "is-plain-obj": "^1.1.0",
-    "is-text-path": "^1.0.1",
+    "is-text-path": "^3.0.0",
     "isarray": "^1.0.0",
     "js-tokens": "^4.0.0",
     "json-parse-better-errors": "^1.0.2",
