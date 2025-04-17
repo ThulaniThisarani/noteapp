@@ -1,8 +1,8 @@
-                                                          Title: Environment Variables and AWS Settings
+## Environment Variables and AWS Settings
 
 This document provides details about the environment variables, AWS settings, and commands used in the project. These settings are essential for configuring and deploying the website to AWS S3 using the CI/CD pipeline.
 
-1. Environment Variables
+# 1. Environment Variables
 Environment variables are used to store sensitive information (such as AWS credentials) securely in GitHub secrets, and they are referenced during the CI/CD process.
 
 AWS Settings
@@ -38,7 +38,7 @@ Example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 Usage: Like the Access Key ID, this secret key is used to authenticate AWS operations in the GitHub Actions pipeline. It should also be stored securely and never exposed publicly.
 
-2. GitHub Actions Secrets
+# 2. GitHub Actions Secrets
 These secrets are used to store sensitive data such as API keys, access tokens, and authentication credentials, ensuring that they are securely accessed during the CI/CD pipeline process.
 
 GitHub Actions Secrets:
@@ -48,7 +48,7 @@ AWS_ACCESS_KEY_ID: Set this secret in the GitHub repository's settings to provid
 
 AWS_SECRET_ACCESS_KEY: Set this secret in the GitHub repository's settings for AWS access.
 
-3. Configuration Files
+# 3. Configuration Files
 These configuration files are crucial for setting up the CI/CD pipeline and ensuring smooth deployment.
 
 GitHub Actions Workflow (.github/workflows/ci-cd.yml)
@@ -112,7 +112,7 @@ json
 
 
 
-4. Additional Commands
+# 4. Additional Commands
 Here are some commands used to set up, deploy, and manage your website:
 
 To Install Dependencies Locally:
@@ -162,7 +162,7 @@ Upload the files to S3:
 bash
 
 aws s3 sync ./dist s3://your-bucket-name --acl public-read
-5. Common Errors and Troubleshooting
+# 5. Common Errors and Troubleshooting
 Here are some potential issues you might encounter during setup and deployment:
 
 Access Denied:
@@ -179,6 +179,6 @@ GitHub Actions Failing:
 
 Check the logs in the GitHub Actions tab for errors. If there’s an issue with the workflow, it might be due to missing or incorrect environment variables.
 
-Conclusion
+## Conclusion
 This reference document provides an overview of the technical specifications and configurations required for deploying the website to AWS S3 and managing the CI/CD pipeline. By properly setting up these environment variables and configuration files, you ensure secure, efficient deployment of your website.
 
