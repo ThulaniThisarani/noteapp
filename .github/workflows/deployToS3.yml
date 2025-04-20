@@ -23,6 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+    - name: Echo secret
+      run: echo "AWS_ACCESS_KEY_ID = ${{ secrets.AWS_ACCESS_KEY_ID }}"
+    - name: Echo secret
+      run: echo "AWS_S3_BUCKET = ${{ secrets.AWS_S3_BUCKET }}"
+    - name: Echo secret
+      run: echo "AWS_SECRET_ACCESS_KEY = ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
