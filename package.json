@@ -157,9 +157,8 @@
     "standard-version": "^9.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "release": "standard-version",
-    "test:unit": "jest"
+    "test": "jest"
   },
   "jest": {
     "testEnvironment": "jsdom"
