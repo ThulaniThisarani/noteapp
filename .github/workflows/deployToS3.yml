@@ -18,6 +18,18 @@ jobs:
 
       - run: npm ci
       - run: npm test
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # - name: CodeQL SAST Scan
+      #   uses: github/codeql-action/init@v2
+      #   with:
+      #     languages: javascript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
