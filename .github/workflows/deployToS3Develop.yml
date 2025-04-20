@@ -8,7 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    environment: develop
     steps:
       - uses: actions/checkout@v4
 
@@ -22,6 +21,7 @@ jobs:
  
   deploy:
     runs-on: ubuntu-latest
+    environment: develop
     steps:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
