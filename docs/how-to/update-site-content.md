@@ -7,9 +7,11 @@ Steps:
 If you haven’t already cloned the repository, start by cloning it to your local machine.
 
 bash
-git clone https://github.com/yourusername/your-repository-name.git
+git clone (https://github.com/ThulaniThisarani/noteapp.git)
+
 cd your-repository-name
-2. Open the index.html or style.css File
+
+# 2. Open the index.html or style.css File
 Navigate to the index.html file (or the appropriate HTML file for your page content) or the style.css file if you need to update styling.
 
 For text/content changes: Open index.html.
